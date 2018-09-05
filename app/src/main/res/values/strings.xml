@@ -1,0 +1,40 @@
+<resources>
+    <string name="app_name">Football Schedule</string>
+
+    <string name="prev_match">Prev Match</string>
+    <string name="next_match">Next Match</string>
+    <string name="date">date</string>
+    <string name="home_score">home score</string>
+    <string name="away_score">away score</string>
+    <string name="vs">VS</string>
+    <string name="home_club">home club</string>
+    <string name="home_formation">home formation</string>
+    <string name="away_club">away club</string>
+    <string name="goals">Goals</string>
+    <string name="home_goals">home goals</string>
+    <string name="away_goals">away goals</string>
+    <string name="shots">Shots</string>
+    <string name="lineups">Line Up</string>
+    <string name="home_gk">home gk</string>
+    <string name="away_gk">away gk</string>
+    <string name="home_df">home df</string>
+    <string name="away_df">away df</string>
+    <string name="home_mf">home mf</string>
+    <string name="away_mf">away mf</string>
+    <string name="home_fw">home fw</string>
+    <string name="away_fw">away fw</string>
+    <string name="home_subs">home subs</string>
+    <string name="away_subs">away subs</string>
+    <string name="goalkeeper">Goal Keeper</string>
+    <string name="defense">Defense</string>
+    <string name="midfield">Midfield</string>
+    <string name="forward">Forward</string>
+    <string name="subtitutes">Subtitutes</string>
+    <string name="strip">-</string>
+    <string name="english_premier_league">English Premier League</string>
+    <string name="german_bundesliga">German Bundes Liga</string>
+    <string name="italian_serie_a">Italian Serie A</string>
+    <string name="french_ligue_1">French Ligue 1</string>
+    <string name="spanish_la_liga">Spanish La Liga</string>
+
+</resources>
