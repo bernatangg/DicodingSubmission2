@@ -1,28 +1,28 @@
 package com.anggie.kotlin.submissions2.api
 
+import android.net.Uri
 import com.anggie.kotlin.submissions2.BuildConfig
+import java.net.URL
 
 class TheSportDBApi(val id: String?) {
 
-    fun getPrevSchedule(): String {
-        return BuildConfig.BASE_URL +
-                "api/v1/json/${BuildConfig.TSDB_API_KEY}" + "/eventspastleague.php?id=" + id
+    private fun getJson(path: String?): String {
+        val url = Uri.parse(BuildConfig.BASE_URL).buildUpon()
+                .appendPath("api")
+                .appendPath("v1")
+                .appendPath("json")
+                .appendPath(BuildConfig.TSDB_API_KEY)
+                .appendPath(path)
+                .appendQueryParameter("id", id)
+                .build().toString()
+
+        return URL(url).readText()
     }
 
-    fun getNextSchedule(): String {
-        return BuildConfig.BASE_URL +
-                "api/v1/json/${BuildConfig.TSDB_API_KEY}" + "/eventsnextleague.php?id=" + id
-    }
-
-    fun getMatchDetail(): String {
-        return BuildConfig.BASE_URL +
-                "api/v1/json/${BuildConfig.TSDB_API_KEY}" + "/lookupevent.php?id=" + id
-    }
-
-    fun getTeamDetail(): String {
-        return BuildConfig.BASE_URL +
-                "api/v1/json/${BuildConfig.TSDB_API_KEY}" + "/lookupteam.php?id=" + id
-    }
+    fun getPrevSchedule() = getJson("eventspastleague.php")
+    fun getNextSchedule() = getJson("eventsnextleague.php")
+    fun getMatchDetail() = getJson("lookupevent.php")
+    fun getTeamDetail() = getJson("lookupteam.php")
 
 
 
